@@ -1,8 +1,10 @@
 pipeline {
     agent any
-    environment { 
-        CC = 'clang'
-    }
+    properties([
+  parameters([
+    string(name: 'DEPLOY_ENV', defaultValue: 'TESTING', description: 'The target environment', )
+   ])
+])
     stages {
         stage('Example') {
             environment { 
