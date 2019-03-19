@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         choice(choices: ['US-EAST-1', 'US-WEST-2'], description: 'What AWS region?', name: 'region')
-        credentialParam (name: 'host',description: 'Credentials')
+        credentials (name: 'host',description: 'Credentials')
     }
     stages {
         stage('Example') {
