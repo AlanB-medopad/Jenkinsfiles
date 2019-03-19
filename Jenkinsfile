@@ -1,10 +1,8 @@
 pipeline {
     agent any
-    options([
-  parameters([
-    string(name: 'DEPLOY_ENV', defaultValue: 'TESTING', description: 'The target environment', )
-   ])
-])
+    parameters {
+        choice(choices: ['US-EAST-1', 'US-WEST-2'], description: 'What AWS region?', name: 'region')
+    }
     stages {
         stage('Example') {
             environment { 
