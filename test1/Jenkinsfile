@@ -8,9 +8,9 @@ pipeline {
     stages {
         stage('Example') {
             steps{
-                echo "Hello ${params.ACCOUNT}"
+                echo "Account ${params.ACCOUNT}"
                 echo "Location: ${params.REGIONS}"
-                echo "Aws_accessKey: ${params.Credentials}"
+                echo "AWS_AccessKey: ${params.Credentials}"
             }
 
         }
