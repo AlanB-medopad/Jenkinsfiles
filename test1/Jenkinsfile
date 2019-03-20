@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    node {
-        checkout scm
-    }
     parameters {
         choice(choices: ['DEV','QA','DEMO','PROD'], description: 'Which AWS account do you want to use?', name: 'ACCOUNT')
         choice(choices: ['EU (EU-WEST-1)', 'US (US-WEST-2)'], description: 'Which AWS region do you want to use?', name: 'REGIONS')
