@@ -7,9 +7,9 @@ pipeline {
     }
     stages {
         stage('Example') {
-            steps {
-                sh 'printenv'
-            }
+                echo "Hello ${params.ACCOUNT}"
+                echo "Location: ${params.REGIONS}"
+                echo "Aws_accessKey: ${params.Credentials}"
         }
     }
 }
