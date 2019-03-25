@@ -6,7 +6,7 @@ pipeline {
             steps {               
                 
                sh 'pwd'
-               sh 'docker run -v ${pwd}:/src ubuntu /src/epigenome-dev.sh'
+               sh 'docker run -v ${pwd}/test/:/src ubuntu /src/epigenome-dev.sh'
                sh 'ls'
             }
         }
