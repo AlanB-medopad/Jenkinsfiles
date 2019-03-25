@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('Example') {
             steps {               
-                //sh 'docker run -v ${pwd}:/src ubuntu /src/epigenome-dev.sh'
+                
                sh 'pwd'
+               sh 'docker run -v ${pwd}:/src ubuntu /src/epigenome-dev.sh'
                sh 'ls'
             }
         }
