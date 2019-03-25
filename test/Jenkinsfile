@@ -1,13 +1,12 @@
 pipeline {
     agent any
-    parameters {
-        choice(choices: ['QA', 'DEMO','PROD'], description: 'Which AWS account do you want to use?', name: 'ACCOUNT')
-        credentials (name: 'Credentials',description: 'Credentials for all accounts')
-    }
+
     stages {
         stage('Example') {
-            steps {
-                sh 'printenv'
+            steps {               
+                //sh 'docker run -v ${pwd}:/src ubuntu /src/epigenome-dev.sh'
+               sh 'pwd'
+               sh 'ls'
             }
         }
     }
